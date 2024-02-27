@@ -1,8 +1,6 @@
 use proc_macro::TokenStream;
-use quote::{format_ident, quote};
-use syn::{
-    parse_macro_input, Attribute, Data, DeriveInput, Field, Fields, Lit, Meta, PathArguments, Type,
-};
+use quote::quote;
+use syn::{parse_macro_input, Attribute, Data, DeriveInput, Field, Lit, Meta, PathArguments, Type};
 
 /// # Envar
 /// A derive macro to automatically parse environment variables into a struct.

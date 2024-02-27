@@ -1,9 +1,11 @@
 [package]
 name = "envar"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A simple macro to read environment variables at compile time"
 license = "MIT"
+authors = ["Macs1324"]
+repository = "https://github.com/Macs1324/envar"
 
 [lib]
 proc-macro = true

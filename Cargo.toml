@@ -2,6 +2,8 @@
 name = "envar"
 version = "0.1.0"
 edition = "2021"
+description = "A simple macro to read environment variables at compile time"
+license = "MIT"
 
 [lib]
 proc-macro = true

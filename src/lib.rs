@@ -14,9 +14,9 @@ use syn::{
 /// use envar::Envar;
 /// #[derive(Envar)]
 /// struct Config {
-///    #[env("DB_CONNECTION_PORT")]
+///    #[env = "DB_CONNECTION_PORT"]
 ///    port: u16,
-///    #[env("DB_CONNECTION_HOST")]
+///    #[env = "DB_CONNECTION_HOST"]
 ///    host: String,
 ///    debug: Option<bool>,
 ///}
@@ -27,6 +27,7 @@ use syn::{
 ///   // If PORT and HOST are not found in the environment, the program will not compile.
 ///   // If DEBUG is not found, it will be None.
 ///   println!("Debug: {:?}", config.debug);
+/// }
 /// ```
 /// The `env` attribute can be used to specify a different environment variable name.
 /// If the attribute is not present, the environment variable name will be the same as the field name in uppercase.
@@ -34,12 +35,12 @@ use syn::{
 /// use envar::Envar;
 /// #[derive(Envar)]
 /// struct Config {
-///   #[env("PORT")]
+///   #[env = "DB_CONNECTION_PORT"]
 ///   port: u16,
 ///   host: String,
 ///}
 /// ```
-/// In this example, the environment variable for `port` will be `PORT` and the environment variable for `host` will be `HOST`.
+/// In this example, the environment variable for `port` will be `DB_CONNECTION_PORT` and the environment variable for `host` will be `HOST`.
 ///
 ///
 #[proc_macro_derive(Envar, attributes(env))]
